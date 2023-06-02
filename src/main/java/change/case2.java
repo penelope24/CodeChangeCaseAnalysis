@@ -13,6 +13,7 @@ public class case2 {
         Count = 0 ;
         while (!marksQueue.isEmpty()) {
             int Marks = marksQueue.poll();
+            Marks += 1;
             if (Marks >= 40) {
                 Pass = Pass + 1;
             }
@@ -31,6 +32,9 @@ public class case2 {
         int[] a = new int[last];
         String[] b = new String[last];
         int i = 0;
+        if (queue.isEmpty()) {
+            return;
+        }
         while (i < last) {
             a[i] = 0;
             b[i] = String.valueOf(i);
@@ -53,6 +57,7 @@ public class case2 {
         for (String s : ss) {
             s += ",";
         }
+        System.out.println("add line");
         System.out.println(ss);
     }
 }
