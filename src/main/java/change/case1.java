@@ -4,13 +4,20 @@ import java.util.Queue;
 
 public class case1 {
 
-    public void func(Queue<Integer> marksQueue) {
+    public void func(Queue<Integer> queue) {
         int Pass, Fail, Count;
-        Pass = 0 ;
-        Fail = 0 ;
-        Count = 0 ;
-        while (!marksQueue.isEmpty()) {
-            int Marks = marksQueue.poll();
+        if (queue.isEmpty()) {
+            Pass = 0;
+            Fail = 0;
+            Count = 0;
+        }
+        else {
+            Pass = 1;
+            Fail = 1;
+            Count = 1;
+        }
+        while (!queue.isEmpty()) {
+            int Marks = queue.poll();
             if (Marks >= 40) {
                 Pass = Pass + 1;
             }
