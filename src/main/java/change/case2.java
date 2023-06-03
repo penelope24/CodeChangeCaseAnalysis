@@ -14,9 +14,6 @@ public class case2 {
         while (!marksQueue.isEmpty()) {
             int Marks = marksQueue.poll();
             Marks += 1;
-            if (Marks >= 40) {
-                Pass = Pass + 1;
-            }
             if (Marks < 40) {
                 Fail = Fail + 1;
             }
@@ -32,7 +29,8 @@ public class case2 {
         int[] a = new int[last];
         String[] b = new String[last];
         int i = 0;
-        if (queue.isEmpty()) {
+        if (!queue.isEmpty() && queue.size() > 1) {
+            System.out.println("this is a add line");
             return;
         }
         while (i < last) {
@@ -57,6 +55,7 @@ public class case2 {
         for (String s : ss) {
             s += ",";
         }
+        System.out.println("add line");
         System.out.println("add line");
         System.out.println(ss);
     }
